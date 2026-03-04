@@ -14,38 +14,43 @@ class ImageInternetPage extends StatelessWidget {
         backgroundColor: cs.primary,
         foregroundColor: Colors.white,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(16),
-          child: Image.network(
-            url,
-            width: double.infinity,
-            height: 260,
-            fit: BoxFit.cover,
-            loadingBuilder: (context, child, progress) {
-              if (progress == null) return child;
 
-              final total = progress.expectedTotalBytes ?? 1;
-              final loaded = progress.cumulativeBytesLoaded;
-              final value = loaded / total;
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(16),
+            child: Image.network(
+              url,
+              width: 320,
+              height: 260,
+              fit: BoxFit.cover,
+              loadingBuilder: (context, child, progress) {
+                if (progress == null) return child;
 
-              return SizedBox(
-                height: 260,
-                child: Center(child: CircularProgressIndicator(value: value)),
-              );
-            },
-            errorBuilder: (context, error, stack) {
-              return SizedBox(
-                height: 260,
-                child: Center(
-                  child: Text(
-                    'Gagal load image:\n$error',
-                    textAlign: TextAlign.center,
+                final total = progress.expectedTotalBytes ?? 1;
+                final loaded = progress.cumulativeBytesLoaded;
+                final value = loaded / total;
+
+                return SizedBox(
+                  height: 260,
+                  width: 320,
+                  child: Center(child: CircularProgressIndicator(value: value)),
+                );
+              },
+              errorBuilder: (context, error, stack) {
+                return SizedBox(
+                  height: 260,
+                  width: 320,
+                  child: Center(
+                    child: Text(
+                      'Gagal load image:\n$error',
+                      textAlign: TextAlign.center,
+                    ),
                   ),
-                ),
-              );
-            },
+                );
+              },
+            ),
           ),
         ),
       ),

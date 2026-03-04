@@ -19,6 +19,15 @@ import 'image_local_page.dart';
 import 'image_internet_page.dart';
 import 'icon_page.dart';
 
+import 'listview_default_page.dart';
+import 'listview_builder_page.dart';
+import 'listview_separated_page.dart';
+import 'listview_costum_page.dart';
+import 'gridview_count_page.dart';
+import 'gridview_builder_page.dart';
+import 'gridview_extent_page.dart';
+import 'gridview_costum_page.dart';
+
 class HomeMenu extends StatelessWidget {
   const HomeMenu({super.key});
 
@@ -81,8 +90,6 @@ class HomeMenu extends StatelessWidget {
         icon: Icons.grid_view,
         page: const RowColumnPage(),
       ),
-
-      // ✅ 8 menu terbaru
       _MenuItem(
         title: 'Stack',
         subtitle: 'Tumpuk widget (overlay)',
@@ -130,6 +137,54 @@ class HomeMenu extends StatelessWidget {
         subtitle: 'Contoh penggunaan Icon',
         icon: Icons.emoji_emotions,
         page: const IconPage(),
+      ),
+      _MenuItem(
+        title: 'ListView Default',
+        subtitle: 'ListView dengan item default',
+        icon: Icons.list,
+        page: const ListViewDefaultPage(),
+      ),
+      _MenuItem(
+        title: 'ListView Builder',
+        subtitle: 'ListView dengan builder',
+        icon: Icons.list,
+        page: const ListViewBuilderPage(),
+      ),
+      _MenuItem(
+        title: 'ListView Separated',
+        subtitle: 'ListView dengan separator',
+        icon: Icons.list_alt,
+        page: const ListViewSeparatedPage(),
+      ),
+      _MenuItem(
+        title: 'ListView Costum',
+        subtitle: 'ListView dengan item custom',
+        icon: Icons.list_outlined,
+        page: const ListViewCostumPage(),
+      ),
+      _MenuItem(
+        title: 'GridView Count',
+        subtitle: 'GridView dengan count',
+        icon: Icons.grid_3x3,
+        page: const GridViewCountPage(),
+      ),
+      _MenuItem(
+        title: 'GridView Builder',
+        subtitle: 'GridView dengan builder',
+        icon: Icons.grid_view,
+        page: const GridViewBuilderPage(),
+      ),
+      _MenuItem(
+        title: 'GridView Extent',
+        subtitle: 'GridView dengan extent',
+        icon: Icons.grid_4x4,
+        page: const GridViewExtentPage(),
+      ),
+      _MenuItem(
+        title: 'GridView Costum',
+        subtitle: 'GridView dengan item custom',
+        icon: Icons.grid_goldenratio,
+        page: const GridViewCostumPage(),
       ),
     ];
 
