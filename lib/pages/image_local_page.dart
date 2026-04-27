@@ -16,8 +16,8 @@ class ImageLocalPage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center, // tengah vertikal
-          crossAxisAlignment: CrossAxisAlignment.center, // tengah horizontal
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(height: 12),
             ClipRRect(

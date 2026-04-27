@@ -28,6 +28,10 @@ import 'gridview_builder_page.dart';
 import 'gridview_extent_page.dart';
 import 'gridview_costum_page.dart';
 
+import 'navigator_push_and_pop_page.dart';
+import 'navigator_push_replacement_page.dart';
+import 'navigator_push_and_remove_until_page.dart';
+
 class HomeMenu extends StatelessWidget {
   const HomeMenu({super.key});
 
@@ -185,6 +189,24 @@ class HomeMenu extends StatelessWidget {
         subtitle: 'GridView dengan item custom',
         icon: Icons.grid_goldenratio,
         page: const GridViewCostumPage(),
+      ),
+      _MenuItem(
+        title: 'Navigator Push & Pop',
+        subtitle: 'Navigasi halaman dengan push dan pop',
+        icon: Icons.navigation,
+        page: const NavigatorPushAndPopPage(),
+      ),
+      _MenuItem(
+        title: 'Navigator Push Replacement',
+        subtitle: 'Navigasi halaman dengan push replacement',
+        icon: Icons.navigation,
+        page: const NavigatorPushReplacementPage(),
+      ),
+      _MenuItem(
+        title: 'Navigator Push & Remove Until',
+        subtitle: 'Navigasi halaman dengan push dan remove until',
+        icon: Icons.navigation,
+        page: const NavigatorPushAndRemoveUntilPage(),
       ),
     ];
 
