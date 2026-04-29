@@ -32,6 +32,8 @@ import 'navigator_push_and_pop_page.dart';
 import 'navigator_push_replacement_page.dart';
 import 'navigator_push_and_remove_until_page.dart';
 
+import 'user_page.dart';
+
 class HomeMenu extends StatelessWidget {
   const HomeMenu({super.key});
 
@@ -207,6 +209,14 @@ class HomeMenu extends StatelessWidget {
         subtitle: 'Navigasi halaman dengan push dan remove until',
         icon: Icons.navigation,
         page: const NavigatorPushAndRemoveUntilPage(),
+      ),
+
+      // Menu lanjutan API
+      _MenuItem(
+        title: 'Users',
+        subtitle: 'Menampilkan data user dari API',
+        icon: Icons.people,
+        page: const UserPage(),
       ),
     ];
 
