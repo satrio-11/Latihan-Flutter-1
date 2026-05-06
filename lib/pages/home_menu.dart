@@ -34,6 +34,9 @@ import 'navigator_push_and_remove_until_page.dart';
 
 import 'user_page.dart';
 
+import 'firebase_status_page.dart';
+import 'firestore_user_page.dart';
+
 class HomeMenu extends StatelessWidget {
   const HomeMenu({super.key});
 
@@ -217,6 +220,18 @@ class HomeMenu extends StatelessWidget {
         subtitle: 'Menampilkan data user dari API',
         icon: Icons.people,
         page: const UserPage(),
+      ),
+      _MenuItem(
+        title: 'Firebase Status',
+        subtitle: 'Cek koneksi Firebase',
+        icon: Icons.cloud_done,
+        page: const FirebaseStatusPage(),
+      ),
+      _MenuItem(
+        title: 'Firestore Database',
+        subtitle: 'Tambah dan lihat data dari Firebase',
+        icon: Icons.storage,
+        page: const FirestoreUserPage(),
       ),
     ];
 
